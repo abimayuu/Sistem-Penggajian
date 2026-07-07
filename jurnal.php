@@ -7,9 +7,7 @@ if (!isset($_SESSION['login'])) {
     exit;
 }
 
-// =====================
-// HAPUS JURNAL
-// =====================
+
 if (isset($_GET['hapus'])) {
     $id = (int)$_GET['hapus'];
 
@@ -21,9 +19,7 @@ if (isset($_GET['hapus'])) {
     exit;
 }
 
-// =====================
-// AMBIL DATA JURNAL
-// =====================
+
 $jurnal = mysqli_query($conn, "
     SELECT * FROM jurnal 
     ORDER BY id_jurnal DESC
