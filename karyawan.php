@@ -7,9 +7,7 @@ if (!isset($_SESSION['login'])) {
     exit;
 }
 
-// ==========================================
-// PROSES TAMBAH DATA (SECURE INTEGRATION)
-// ==========================================
+
 if (isset($_POST['simpan'])) {
     // Mengamankan input data dari karakter berbahaya (SQL Injection)
     $nama          = mysqli_real_escape_string($conn, $_POST['nama']);
@@ -30,9 +28,7 @@ if (isset($_POST['simpan'])) {
     exit;
 }
 
-// ==========================================
-// PROSES NONAKTIFKAN KARYAWAN
-// ==========================================
+
 if (isset($_GET['nonaktif'])) {
     $id = intval($_GET['nonaktif']);
 
@@ -44,9 +40,7 @@ if (isset($_GET['nonaktif'])) {
     exit;
 }
 
-// ==========================================
-// PROSES AKTIFKAN KEMBALI
-// ==========================================
+
 if (isset($_GET['aktif'])) {
     $id = intval($_GET['aktif']);
 
