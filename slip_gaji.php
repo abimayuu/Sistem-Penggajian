@@ -29,9 +29,7 @@ if (!$data) {
     die("<div class='container mt-5 alert alert-danger'>Error: Data rekaman slip gaji tidak ditemukan di sistem.</div>");
 }
 
-// =========================================================
-// PROSES PEMBUATAN LINK WHATSAPP OTOMATIS (FORMAT AKUNTANSI)
-// =========================================================
+
 $no_hp = $data['no_hp'];
 
 // Cek jika nomor HP kosong
