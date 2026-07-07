@@ -30,9 +30,7 @@ if (isset($_GET['filter_bulan'])) {
 }
 $tahun_aktif = isset($_GET['filter_tahun']) ? $_GET['filter_tahun'] : date('Y');
 
-// ==========================================
-// PROSES TAMBAH GAJI
-// ==========================================
+
 if (isset($_POST['simpan'])) {
     $id_karyawan = mysqli_real_escape_string($conn, $_POST['id_karyawan']);
     $bulan       = mysqli_real_escape_string($conn, $_POST['bulan']);
@@ -75,9 +73,7 @@ if (isset($_POST['simpan'])) {
 if (isset($_GET['sukses'])) $pesan_sukses = "Data penggajian berhasil disimpan!";
 if (isset($_GET['sukses_update'])) $pesan_sukses = "Data penggajian berhasil diperbarui!";
 
-// ==========================================
-// PROSES HAPUS DATA
-// ==========================================
+
 if (isset($_GET['hapus'])) {
     $id = mysqli_real_escape_string($conn, $_GET['hapus']);
     mysqli_query($conn, "DELETE FROM jurnal WHERE id_gaji='$id'");
