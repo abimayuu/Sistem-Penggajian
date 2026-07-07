@@ -7,9 +7,7 @@ if (!isset($_SESSION['login'])) {
     exit;
 }
 
-/* ======================
-   QUERY STATISTIK
-====================== */
+
 $karyawan = mysqli_query($conn, "SELECT COUNT(*) as total FROM karyawan WHERE status='Aktif'");
 $data_karyawan = mysqli_fetch_assoc($karyawan);
 
@@ -20,9 +18,7 @@ $total_pengeluaran = mysqli_query($conn, "SELECT SUM(total_gaji) as total FROM p
 $data_pengeluaran = mysqli_fetch_assoc($total_pengeluaran);
 $grand_total_gaji = $data_pengeluaran['total'] ? $data_pengeluaran['total'] : 0;
 
-/* ======================
-   QUERY GRAFIK
-====================== */
+
 $grafik = mysqli_query($conn, "
     SELECT bulan, tahun, SUM(total_gaji) as total 
     FROM penggajian 
