@@ -30,9 +30,7 @@ if (empty($data['email'])) {
     die("Gagal: Karyawan bernama " . $data['nama'] . " belum memiliki alamat email di database.");
 }
 
-// ==========================================
-// PENGATURAN EMAIL (STANDAR AKUNTANSI FORMAL)
-// ==========================================
+
 $to      = $data['email'];
 $subject = "Slip Gaji Resmi Periode " . $data['bulan'] . " " . $data['tahun'];
 $from    = "admin@perusahaan.com"; // Ganti dengan nama domain perusahaan kamu nanti
