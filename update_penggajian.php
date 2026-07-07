@@ -34,9 +34,7 @@ if (!$data_lama) {
     exit;
 }
 
-// ==========================================
-// PROSES UPDATE DATA (SAAT TOMBOL DIKLIK)
-// ==========================================
+
 if (isset($_POST['update'])) {
     // Ambil input baru (hanya lembur dan potongan yang boleh diedit)
     $lembur_baru   = isset($_POST['lembur']) ? (int)$_POST['lembur'] : 0;
